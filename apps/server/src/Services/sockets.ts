@@ -1,17 +1,9 @@
 import { Server } from "socket.io";
 import Redis from "ioredis";
 
-const sub = new Redis({
-  host: "redis",
-  port: 6379,
-  connectTimeout: 10000,
-});
+const sub = new Redis();
 
-const pub = new Redis({
-  host: "redis",
-  port: 6379,
-  connectTimeout: 10000,
-});
+const pub = new Redis();
 
 class socketService {
   private _io: Server;
